@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { IFormResetPass } from "../../../Interfaces/AuthInterface";
 import {
   AuthInput,
-  ConfirmPasswordInput,
   PasswordInput,
 } from "../../../Shared/Ui/AuthInput";
 import {

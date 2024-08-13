@@ -1,7 +1,6 @@
 import CookieServices from "../../../utils/Cookies";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContainer from "../../../Shared/Auth/AuthContainer";
-import { useEffect, useState } from "react";
 import { useLoginMutation } from "../../../Toolkit/Auth/authSlice";
 import { useForm } from "react-hook-form";
 import { IFormLogin } from "../../../Interfaces/AuthInterface";
