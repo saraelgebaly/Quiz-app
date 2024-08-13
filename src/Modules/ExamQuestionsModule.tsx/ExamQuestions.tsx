@@ -86,6 +86,8 @@ function ExamQuestions() {
   const handleChangeAnswers = (e: React.ChangeEvent<HTMLInputElement>) => {
     const questionId = Questions?._id;
     const answerValue = e.target.value;
+    //@ts-ignore
+
     setAllAnswers((prev) => {
       const updatedAnswers = prev.answers.map((answer) => {
         if (answer?.question === questionId) {
@@ -187,6 +189,8 @@ function ExamQuestions() {
         response.data?.message === "Student submitted successfully"
       ) {
         response?.data?.data.questions.map((ques: any) =>
+          //@ts-ignore
+
           setRightAnswers((prev) => [...prev, ques?.answer])
         );
 
@@ -200,6 +204,8 @@ function ExamQuestions() {
   };
 
   const handleUncertain = () => {
+    //@ts-ignore
+
     setAllAnswers((prev) => {
       const updatedAnswers = prev.answers.map((answer) => {
         if (answer?.question === Questions?._id) {

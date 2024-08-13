@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CookieServices from "../../../utils/Cookies";
-import { Navigate, Outlet } from "react-router-dom";
-import { useLoginMutation } from "../../../Toolkit/Auth/authSlice";
+import { Navigate} from "react-router-dom";
 
 interface prop {
   children: React.ReactNode;
