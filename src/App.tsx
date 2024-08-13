@@ -1,29 +1,29 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
-import AuthLayout from "./Modules/SharedModule/Components/AuthLayout";
-import NotFound from "./Modules/SharedModule/Components/NotFound";
+import ForgetPassword from "./Modules/Authentication/Components/ForgetPassword";
 import Login from "./Modules/Authentication/Components/Login";
 import Register from "./Modules/Authentication/Components/Register";
-import ForgetPassword from "./Modules/Authentication/Components/ForgetPassword";
 import ResetPassword from "./Modules/Authentication/Components/ResetPassword";
-import ProtectedRoute from "./Modules/SharedModule/Components/ProtectedRoute";
-import MasterLayout from "./Modules/SharedModule/Components/MasterLayout";
 import Dashboard from "./Modules/Dashboard/Components/Dashboard";
+import ExamQuestions from "./Modules/ExamQuestionsModule.tsx/ExamQuestions";
 import Groups from "./Modules/GroupsModule/Components/Groups";
 import Questions from "./Modules/QuestionsModule/Components/Questions";
 import Quizes from "./Modules/QuizModule/Components/Quizes";
-import Students from "./Modules/StudentsModule/Components/Students";
-import { ToastContainer } from "react-toastify";
 import QuizzesDetails from "./Modules/QuizModule/Components/QuizzesDetails";
 import Results from "./Modules/ResultsModule/Components/Results";
-import ResultsTutor from "./Modules/ResultsModule/Components/ResultsTutor";
 import ResultsDetails from "./Modules/ResultsModule/Components/ResultsDetails";
-import ExamQuestions from "./Modules/ExamQuestionsModule.tsx/ExamQuestions";
+import ResultsTutor from "./Modules/ResultsModule/Components/ResultsTutor";
+import AuthLayout from "./Modules/SharedModule/Components/AuthLayout";
 import InstructorProtectedRoute from "./Modules/SharedModule/Components/InstructorProtectedRoute";
+import MasterLayout from "./Modules/SharedModule/Components/MasterLayout";
+import NotFound from "./Modules/SharedModule/Components/NotFound";
+import ProtectedRoute from "./Modules/SharedModule/Components/ProtectedRoute";
 import StudentProtectedRoute from "./Modules/SharedModule/Components/StudentProtectedRoute";
+import Students from "./Modules/StudentsModule/Components/Students";
 
 function App() {
-  const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {
       path: "/",
       element: <AuthLayout />,

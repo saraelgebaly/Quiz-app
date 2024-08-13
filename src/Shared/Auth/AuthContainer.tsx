@@ -1,3 +1,4 @@
+import { User, UserPlus } from "lucide-react";
 import image from "../../assets/images/Image.png";
 import logo from "../../assets/images/logo.png";
 
@@ -19,7 +20,9 @@ export default function AuthContainer({ header, children }: AuthLayoutProps) {
             <div className="flex-1 h-screen pt-5">
               <img src={logo} className="w-[150px]" alt="" />
               <div className="mt-5">
-                <p className="text-[#C5D86D] text-2xl font-semibold">{header}</p>
+                <p className="text-[#C5D86D] text-2xl font-semibold">
+                  {header}
+                </p>
                 {pathname === "/" || pathname === "/register" ? (
                   <div className="flex gap-9 pt-7">
                     <Link to="/">
@@ -28,11 +31,13 @@ export default function AuthContainer({ header, children }: AuthLayoutProps) {
                           pathname === "/" ? "border-4 border-[#C5D86D]" : ""
                         }`}
                       >
-                       
                         {pathname === "/" ? (
-                          <i className="fa solid fa-user text-[40px] text-[#C5D86D]"></i>
+                          <User
+                            size="40px"
+                            className="mx-auto text-[#C5D86D]"
+                          />
                         ) : (
-                          <i className="fa solid fa-user text-[40px]"></i>
+                          <User size="40px" className="mx-auto" />
                         )}
                         <p>Sign in</p>
                       </div>
@@ -46,10 +51,13 @@ export default function AuthContainer({ header, children }: AuthLayoutProps) {
                             : ""
                         }`}
                       >
-                       {pathname === "/register" ? (
-                          <i className="fa solid fa-user-plus text-[40px] text-[#C5D86D]"></i>
+                        {pathname === "/register" ? (
+                          <UserPlus
+                            size="40px"
+                            className="mx-auto text-[#C5D86D]"
+                          />
                         ) : (
-                          <i className="fa solid fa-user-plus text-[40px]"></i>
+                          <UserPlus size="40px" className=" mx-auto" />
                         )}
                         <p>Sign Up</p>
                       </div>

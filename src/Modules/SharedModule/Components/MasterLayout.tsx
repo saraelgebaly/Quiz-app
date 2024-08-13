@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
-import SideBar from './SideBar'
-import NavBar from './NavBar'
+import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import NavBar from './NavBar';
+import SideBar from './SideBar';
 
 function MasterLayout() {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
