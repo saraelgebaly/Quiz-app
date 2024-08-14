@@ -101,11 +101,7 @@ function App() {
           children: [
             {
               path: "",
-              element: (
-                <InstructorProtectedRoute>
-                  <ResultsTutor />
-                </InstructorProtectedRoute>
-              ),
+              element: <ResultsTutor />,
             },
             {
               path: "results-details",
